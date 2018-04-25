@@ -16,6 +16,8 @@ return (
           title={tune['im:name'].label}
           artist={tune['im:artist'].label}
           image={tune['im:image'][2].label}
+          audio={tune.link[1].attributes.href}
+          handlePlayPause={props.handlePlayPause}
         />
       )
 

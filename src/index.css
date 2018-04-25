@@ -3,3 +3,23 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+h1 {
+  font-family: cursive;
+  font-size: 4em;
+  margin: 0;
+  text-align: center;
+}
+
+
+ /* .play, img {
+  height: 50px;
+  width: 50px;
+}
+
+.tune-details {
+  height: 80px;
+  width: 70px;
+
+} */
