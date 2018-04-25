@@ -19,7 +19,7 @@ class Tune extends React.Component {
           id={this.props.position}
           alt="click to play"
           className='audio-control'
-          src= 'https://image.freepik.com/free-icon/play-button_318-42541.jpg height: 40px, width: 40px'
+          src= 'https://t3.ftcdn.net/jpg/00/31/52/04/240_F_31520498_c7779FPzqOqhHOjKLVmxewKiVQv0dbU5.jpg'
           onClick={() => {this.props.handlePlayPause(this.audio)}}
         />
 

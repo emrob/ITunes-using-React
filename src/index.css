@@ -12,14 +12,14 @@ h1 {
   text-align: center;
 }
 
-
- /* .play, img {
-  height: 50px;
-  width: 50px;
+.audio-control {
+  height: 60px;
+  width: 100px;
 }
 
+/*
 .tune-details {
   height: 80px;
   width: 70px;
 
-} */
+}  */
