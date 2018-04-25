@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../components/Heading"
 import Chart from '../components/Chart';
 
 class TunesContainer extends React.Component {
@@ -37,6 +38,7 @@ class TunesContainer extends React.Component {
   render(){
     return (
         <div>
+        <Heading />
         <Chart
           tunes={this.state.tunes}
           // handleSelectChange={this.handleSelectChange}

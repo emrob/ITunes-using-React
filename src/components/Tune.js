@@ -6,8 +6,10 @@ class Tune extends React.Component {
 
     return (
       <div className="tune-details">
-
-        <h4>{this.props.title} by {this.props.artist}</h4>
+        <ul>
+        <li><strong>{this.props.title}</strong> by {this.props.artist}</li>
+        <img src= {this.props.image} />
+        </ul>
 
       </div>
     );

@@ -15,6 +15,7 @@ return (
           position={index + 1}
           title={tune['im:name'].label}
           artist={tune['im:artist'].label}
+          image={tune['im:image'][2].label}
         />
       )
 
