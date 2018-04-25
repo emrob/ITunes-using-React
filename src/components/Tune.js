@@ -5,8 +5,17 @@ class Tune extends React.Component {
   render(){
 
     return (
-  <div className="play">
-         <img
+      <div className="play">
+
+        <div className="tune-details">
+          <h2>{this.props.position}.</h2>
+          <img src= {this.props.image} onClick={() => {this.props.handlePlayPause(this.audio)}} />
+          <br></br>
+          <strong>"{this.props.title}"</strong> by {this.props.artist}
+          <br></br>
+        </div>
+
+        <img
           id={this.props.position}
           alt="click to play"
           className='audio-control'
@@ -14,23 +23,17 @@ class Tune extends React.Component {
           onClick={() => {this.props.handlePlayPause(this.audio)}}
         />
 
-          <div className="tune-details">
-              <h2>{this.props.position}.</h2>
-              <img src= {this.props.image} onClick={() => {this.props.handlePlayPause(this.audio)}} />
-              <br></br>
-              <strong>"{this.props.title}"</strong> by {this.props.artist}
-              <br></br>
-          </div>
+
 
         <audio
           ref={(audio) => this.audio = audio}
           id={'audio' + this.props.position}
           src={this.props.audio}  />
 
-      </div>
+        </div>
 
-    );
-  }
-};
+      );
+    }
+  };
 
-export default Tune;
+  export default Tune;
