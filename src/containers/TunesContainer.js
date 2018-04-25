@@ -1,36 +1,49 @@
 import React from "react";
-import TuneSelector from '../components/TuneSelector';
+import Chart from '../components/Chart';
 
 class TunesContainer extends React.Component {
   constructor(props){
     super(props);
-    this.handleTuneSelected = this.handleTuneSelected.bind(this);
     this.state = {
-      tunes: {},
-      currentTune: null
-    };
+      tunes: []
+    }
   }
 
   componentDidMount(){
     fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
     .then(response => response.json())
-    .then(json => this.setState({tunes: json}));
+    .then(json => this.setState({tunes: json.feed.entry}));
   }
 
-  handleTuneSelected(index){
-    const selectedTune = this.state.tunes[index];
-    this.setState({currentTune: selectedTune});
-  }
+//   loadTunes(url) {
+//   const request = new XMLHttpRequest();
+//   request.open('GET', url);
+//   request.onload = () => {
+//     if (request.status === 200) {
+//       const jsonString = request.responseText;
+//       const tuneList = JSON.parse(jsonString);
+//       this.setState({tunes: tuneList.feed.entry});
+//     }
+//   };
+//   request.send();
+// }
+//
+//
+// handleSelectChange(event) {
+//   this.loadTunes(event.target.value);
+// }
+
 
   render(){
     return (
-        <React.Fragment>
-        <h2>Itunes Container</h2>
-        <TuneSelector tunes ={this.state.tunes}
-          onTuneSelected={this.handleTuneSelected}
+        <div>
+        <Chart
+          tunes={this.state.tunes}
+          // handleSelectChange={this.handleSelectChange}
         />
 
-      </React.Fragment>
+
+      </div>
     );
   }
 }

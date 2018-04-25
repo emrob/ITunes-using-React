@@ -3,8 +3,11 @@ import TunesContainer from './containers/TunesContainer';
 import './App.css';
 
 class App extends Component {
-  render() {
+  render(){
+    // const allTunes = [{name: "All", url: "https://itunes.apple.com/gb/rss/topsongs/limit=20/json"}]
+
     return (
+    // <TunesContainer allTunes={allTunes} />
       <TunesContainer />
     );
   }
